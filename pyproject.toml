@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trexclitool"
+version = "0.0.9"
+authors = [
+  { name="Damian Gonzalez", email="ing.damian.gonzalez@gmail.com" },
+]
+description = "Copier test library"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  'InquirerPy',
+  'copier',
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.scripts]
+trexclitool = "trexclitool:trexcli"
+
+[project.urls]
+"Homepage" = "https://github.com/ingdamiangonzalez/python-tf-module-starter"
+"Bug Tracker" = "https://github.com/ingdamiangonzalez/python-tf-module-starter/issues"
