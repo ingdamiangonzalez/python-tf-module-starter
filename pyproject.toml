@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "trexclitool"
-version = "0.0.9"
+version = "0.0.14"
 authors = [
   { name="Damian Gonzalez", email="ing.damian.gonzalez@gmail.com" },
 ]

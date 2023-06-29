@@ -11,13 +11,16 @@ def trexcli():
 
   if rol == "Cloud engineer":
     template = inquirer.select(
-        message = "Selecciona tu template:",
-        choices = ["Crear Modulo", "Setup cliente"]
+        message = "Que deseas hacer hoy?",
+        choices = ["Crear un nuevo Modulo!", "Crear infraestructura para un cliente!"]
     ).execute()
-    if template == "Crear Modulo":
-      run_copy("https://github.com/ingdamiangonzalez/tf-skeleton-module-copier.git", ".")
-    if template == "Setup cliente":
-      print("no tenemos templates para setup cliente")
+    if template == "Crear un nuevo Modulo!":
+        destinationFolder = inquirer.text(message="En que carpeta copiamos tu proyecto?").execute()
+        run_copy("https://github.com/ingdamiangonzalez/tf-skeleton-module-copier.git", destinationFolder)
+    if template == "Crear infraestructura para un cliente!":
+        destinationFolder = inquirer.text(message="En que carpeta copiamos tu proyecto?").execute()
+        run_copy("https://github.com/ingdamiangonzalez/tf-skeleton-base-infra-copier.git", destinationFolder)
+
 
 
   if rol == "Software engineer":
